@@ -5,13 +5,30 @@
 
 目前该spa已经可以实现标签分类、标签\笔记删除、添加以及编辑等基本功能。
 
+本项目有mobile端版本，请移步[vue-vueRouter-note-Firebase-mobile](https://github.com/Geocld/vue-vueRouter-note-Firebase-mobile)
+
 在线[demo](http://geocld.github.io/demo/pc-note/index.html)
 
 #技术栈
 
-[vue.js](http://cn.vuejs.org/)
+框架：[vue.js](http://cn.vuejs.org/)
 
-[Firebse](https://www.firebase.com/)
+后台数据同步：[Firebse](https://www.firebase.com/)
+
+UI库：[Semantic UI](http://www.semantic-ui.cn/)
+
+#项目安装
+1、安装项目依赖
+
+	npm install
+
+2、发开模式下运行项目
+
+	npm run dev
+
+3、项目正式文件发布
+
+	npm run build
 
 #效果预览
 ![](http://i.imgur.com/I2KkSfi.png)
