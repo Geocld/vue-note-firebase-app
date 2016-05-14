@@ -1,7 +1,7 @@
 <template>
  	<div class="item">
  		<div class="content">
- 			<i class="icon remove right-float" @click="deleteNote"></i>
+ 			<i class="icon remove right-float" @click.stop="deleteNote"></i>
  			<a class="header">{{ title }}</a>
  			<div class="desctiption">
  				{{ content }}

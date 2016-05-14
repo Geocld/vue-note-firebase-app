@@ -8,8 +8,8 @@
 			</div>
 		</div>
 		<div class="ui relaxed divided selection list">
-			<note-item v-for="(id, note) in note_arr | filterBytitle query"
-				:id="id"
+			<note-item v-for="note in note_arr | filterBytitle query"
+				:id="note.id"
 				:title="note.title"
 				:content="note.content"
 				:category="note.category"
