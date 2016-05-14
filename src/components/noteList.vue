@@ -8,7 +8,7 @@
 			</div>
 		</div>
 		<div class="ui relaxed divided selection list">
-			<note-item v-for="(id, note) in notes | filterBytitle query"
+			<note-item v-for="(id, note) in note_arr | filterBytitle query"
 				:id="id"
 				:title="note.title"
 				:content="note.content"
@@ -33,6 +33,21 @@ export default {
 			query: '',
 			note_modal_id: 'edit_note',
 			content_id: ''
+		}
+	},
+	computed: {
+		note_arr() {
+			var arr = [];
+			for (var i in this.notes) {
+				if (this.notes.hasOwnProperty(i)) {
+					this.notes[i].id = i;
+					arr.push(this.notes[i]);
+				}
+			}
+			arr.sort(function(a, b) {
+				return new Date(b.date.replace(/\s/ig,'T')) - new Date(a.date.replace(/\s/ig,'T'));
+			});
+			return arr;
 		}
 	},
  	components: {

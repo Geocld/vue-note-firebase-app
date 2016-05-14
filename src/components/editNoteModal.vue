@@ -34,6 +34,7 @@
 </template>
 
 <script>
+import moment from 'moment'
 import store from '../store'
 
 export default {
@@ -51,19 +52,26 @@ export default {
   		if(this.title === '' || this.content === '' || this.noteCategory === '') {
   			return false;
   		}
+      var now = moment().format('YYYY-MM-DD HH:mm');
   		const newNote = {
   			title: this.title,
   			content: this.content,
-  			category: this.noteCategory
+  			category: this.noteCategory,
+        date: now
   		};
   		store.addNote(newNote);
   		$('#add_note').modal('hide');
   	},
   	editNote() {
+      if(this.title === '' || this.content === '' || this.noteCategory === '') {
+        return false;
+      }
+      var now = moment().format('YYYY-MM-DD HH:mm');
   		const editContent = {
   			title: this.title,
   			content: this.content,
-  			category: this.noteCategory
+  			category: this.noteCategory,
+        date: now
   		};
   		store.editNote(this.content_id, editContent);
   		$('#edit_note').modal('hide');
