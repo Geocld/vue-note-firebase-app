@@ -14,7 +14,7 @@
 				:content="note.content"
 				:category="note.category"
 				:category-color="categories[note.category]"
-				@click="edit_note(id, note)">
+				@click="edit_note(note.id, note)">
 			</note-item>
 		</div>
 	</div>

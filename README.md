@@ -34,6 +34,6 @@ UI库：[Semantic UI](http://www.semantic-ui.cn/)
 ![](http://i.imgur.com/I2KkSfi.png)
 
 #TODO
-增加笔记根据日历排序功能
+<del>增加笔记根据日历排序功能</del>
 
 登陆认证功能
